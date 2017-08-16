@@ -18,7 +18,7 @@ describe('Project-1 Functions', () => {
     it('Should return 20 when passed 2', () => {
       const multiplyByTen = funcs.multiplyByTen;
       const result = multiplyByTen(2);
-      expect(result).to.equal(20);
+      assert.strictEqual(result, 20);
     });
     it('Should not equal to 10 when passed 2', () => {
       const multiplyByTen = funcs.multiplyByTen;
@@ -58,12 +58,12 @@ describe('Project-1 Functions', () => {
     it('should return true when passed bat and cat', () => {
       const areSameLength = funcs.areSameLength;
       const res = areSameLength('bat', 'cat');
-      expect(res).to.be.true;
+      assert.isTrue(res);
     });
     it('should return false when passed bat and caaat', () => {
       const areSameLength = funcs.areSameLength;
       const res = areSameLength('bat', 'caaat');
-      expect(res).to.be.false;
+      assert.isNotTrue(res);
     });
   });
 
@@ -75,7 +75,7 @@ describe('Project-1 Functions', () => {
     it('should be equal when passed same value', () => {
       const areEqual = funcs.areEqual;
       const res = areEqual(5, 5);
-      expect(res).to.be.true;
+      assert.isTrue(res);
     });
     it('should return boolean', () => {
       const areEqual = funcs.areEqual;
@@ -92,7 +92,7 @@ describe('Project-1 Functions', () => {
     it('should return true if less than ninety', () => {
       const lessThanNinety = funcs.lessThanNinety;
       const res = lessThanNinety(80);
-      expect(res).to.be.true;
+      assert.isTrue(res);
     });
     it('should return a boolean', () => {
       const lessThanNinety = funcs.lessThanNinety;
@@ -109,12 +109,12 @@ describe('Project-1 Functions', () => {
     it('should be return true if greater than fifty', () => {
       const greaterThanFifty = funcs.greaterThanFifty;
       const res = greaterThanFifty(55);
-      expect(res).to.be.true;
+      assert.isTrue(res);
     });
     it('should return a boolean', () => {
       const greaterThanFifty = funcs.greaterThanFifty;
       const res = greaterThanFifty(40);
-      expect(res).to.be.false;
+      assert.isBoolean(res);
     });
   });
 
@@ -184,7 +184,6 @@ describe('Project-1 Functions', () => {
       const res = multiply(5, 5);
       assert.typeOf(res, 'number');
     });
-
   });
 
   describe('`getRemainder`', () => {
@@ -214,91 +213,91 @@ describe('Project-1 Functions', () => {
   describe('`isOdd`', () => {
     it('should be a function', () => {
       const isOdd = funcs.isOdd;
-      assert.typeOf(isOdd, 'number');
+      assert.typeOf(isOdd, 'function');
     });
   });
 
   describe('`square`', () => {
     it('should be a function', () => {
       const square = funcs.square;
-      assert.typeOf(square, 'object');
+      assert.typeOf(square, 'function');
     });
   });
 
   describe('`cube`', () => {
     it('should be a function', () => {
       const cube = funcs.cube;
-      assert.typeOf(cube, 'object');
+      assert.typeOf(cube, 'function');
     });
   });
 
   describe('`raiseToPower`', () => {
     it('should be a function', () => {
       const raiseToPower = funcs.raiseToPower;
-      assert.typeOf(raiseToPower, 'object');
+      assert.typeOf(raiseToPower, 'function');
     });
   });
 
   describe('`roundNumber`', () => {
     it('should be a function', () => {
       const roundNumber = funcs.roundNumber;
-      assert.typeOf(roundNumber, 'object');
+      assert.typeOf(roundNumber, 'function');
     });
   });
 
   describe('`roundUp`', () => {
     it('should be a function', () => {
       const roundUp = funcs.roundUp;
-      assert.typeOf(roundUp, 'object');
+      assert.typeOf(roundUp, 'function');
     });
   });
 
   describe('`addExclamationPoint`', () => {
     it('should be a function', () => {
       const addExclamationPoint = funcs.addExclamationPoint;
-      assert.typeOf(addExclamationPoint, 'string');
+      assert.typeOf(addExclamationPoint, 'function');
     });
   });
 
   describe('`combineNames`', () => {
     it('should be a function', () => {
       const combineNames = funcs.combineNames;
-      assert.typeOf(combineNames, 'string');
+      assert.typeOf(combineNames, 'function');
     });
   });
 
   describe('`getGreeting`', () => {
     it('should be a function', () => {
       const getGreeting = funcs.getGreeting;
-      assert.typeOf(getGreeting, 'string');
+      assert.typeOf(getGreeting, 'function');
     });
   });
 
   describe('`getRectangleArea`', () => {
     it('should be a function', () => {
       const getRectangleArea = funcs.getRectangleArea;
-      assert.typeOf(getRectangleArea, 'string');
+      assert.typeOf(getRectangleArea, 'function');
     });
   });
 
   describe('`getTriangleArea`', () => {
     it('should be a function', () => {
       const getTriangleArea = funcs.getTriangleArea;
-      assert.typeOf(getTriangleArea, 'string');
+      assert.typeOf(getTriangleArea, 'function');
     });
   });
 
   describe('`getCircleArea`', () => {
     it('should be a function', () => {
       const getCircleArea = funcs.getCircleArea;
-      assert.typeOf(getCircleArea, 'string');
+      assert.typeOf(getCircleArea, 'function');
     });
   });
 
   describe('`getRectangularPrismVolume`', () => {
     it('should be a function', () => {
       const getRectangularPrismVolume = funcs.getRectangularPrismVolume;
-      assert.typeOf(getRectangularPrismVolume, 'string');
+      assert.typeOf(getRectangularPrismVolume, 'function');
     });
   });
 });
