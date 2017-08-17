@@ -18,43 +18,62 @@ describe('Arrays', () => {
   describe('`each`', () => {
     it('should be a function', () => {
       const each = arrayFunctions.each;
-      expect(each).to.be.a('string');
+      expect(each).to.be.a('function');
     });
-    // begin here
+    it('should pass each element to callback function', () => {
+      const each = arrayFunctions.each;
+      const myCallback = sinon.spy();
+      const myArray = [1, 2];
+      each(myArray, myCallback);
+      expect(myCallback).to.have.been.calledTwice;
+    });
   });
 
   describe('`map`', () => {
     it('should be a function', () => {
       const map = arrayFunctions.map;
-      expect(map).to.be.an('object');
+      expect(map).to.be.an('function');
+    });
+    it('should pass map element to callback function', () => {
+      const map = arrayFunctions.map;
+      const myCallback = sinon.spy();
+      const myArray = [1, 2];
+      map(myArray, myCallback);
+      expect(myCallback).to.have.been.calledTwice;
+    });
+    it('should pass map element to callback function and put value into new array', () => {
+      const map = arrayFunctions.map;
+      const myArray = [1, 2];
+      const result = map(myArray, n => (n * 2));
+      expect(result).to.deep.equal([2, 4]);
     });
   });
 
   describe('`reduce`', () => {
     it('should be a function', () => {
       const reduce = arrayFunctions.reduce;
-      expect(reduce).to.be.a('number');
+      expect(reduce).to.be.a('function');
     });
   });
 
   describe('`find`', () => {
     it('should be a function', () => {
       const find = arrayFunctions.find;
-      expect(find).to.be.an('array');
+      expect(find).to.be.an('function');
     });
   });
 
   describe('`filter`', () => {
     it('should be a function', () => {
       const filter = arrayFunctions.filter;
-      expect(filter).to.be.a('null');
+      expect(filter).to.be.a('function');
     });
   });
 
   describe('`flatten`', () => {
     it('should be a function', () => {
       const flatten = arrayFunctions.flatten;
-      expect(flatten).to.be.a('promise');
+      expect(flatten).to.be.a('function');
     });
   });
 });
